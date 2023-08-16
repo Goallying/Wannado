@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304ADC69E865A3A48614EA30 /* Pods_Wannado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009BD2D0F357D76972F578FE /* Pods_Wannado.framework */; };
+		8462D52A2A89B9370001E0A1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462D5292A89B9370001E0A1 /* HomeViewModel.swift */; };
+		8462D52C2A89BD770001E0A1 /* VideoMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462D52B2A89BD770001E0A1 /* VideoMarkView.swift */; };
 		848DA8EA2A84C5D100EF6DDC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA8E92A84C5D100EF6DDC /* LoginView.swift */; };
 		848DA8EC2A84C5E100EF6DDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA8EB2A84C5E100EF6DDC /* ProfileView.swift */; };
 		848DA8EE2A84C5F500EF6DDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA8ED2A84C5F500EF6DDC /* HomeView.swift */; };
 		84C2EB882A80C15B00C8118C /* WannadoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EB872A80C15B00C8118C /* WannadoApp.swift */; };
 		84C2EB8C2A80C15D00C8118C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C2EB8B2A80C15D00C8118C /* Assets.xcassets */; };
 		84C2EB8F2A80C15D00C8118C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C2EB8E2A80C15D00C8118C /* Preview Assets.xcassets */; };
+		84CF31B82A8B749700792B00 /* ImageMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF31B72A8B749700792B00 /* ImageMarkView.swift */; };
+		84CF31BA2A8C543700792B00 /* AbilityLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF31B92A8C543700792B00 /* AbilityLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009BD2D0F357D76972F578FE /* Pods_Wannado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wannado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8462D5292A89B9370001E0A1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8462D52B2A89BD770001E0A1 /* VideoMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMarkView.swift; sourceTree = "<group>"; };
 		848DA8E92A84C5D100EF6DDC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		848DA8EB2A84C5E100EF6DDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		848DA8ED2A84C5F500EF6DDC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -23,6 +31,10 @@
 		84C2EB872A80C15B00C8118C /* WannadoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannadoApp.swift; sourceTree = "<group>"; };
 		84C2EB8B2A80C15D00C8118C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C2EB8E2A80C15D00C8118C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84CF31B72A8B749700792B00 /* ImageMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMarkView.swift; sourceTree = "<group>"; };
+		84CF31B92A8C543700792B00 /* AbilityLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityLink.swift; sourceTree = "<group>"; };
+		9E96B35EF27CA0193BDABC88 /* Pods-Wannado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannado.release.xcconfig"; path = "Target Support Files/Pods-Wannado/Pods-Wannado.release.xcconfig"; sourceTree = "<group>"; };
+		DC175A91F95BD15251871BC7 /* Pods-Wannado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wannado.debug.xcconfig"; path = "Target Support Files/Pods-Wannado/Pods-Wannado.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +42,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304ADC69E865A3A48614EA30 /* Pods_Wannado.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8462D5262A89B8AF0001E0A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				848DA8E92A84C5D100EF6DDC /* LoginView.swift */,
+				848DA8ED2A84C5F500EF6DDC /* HomeView.swift */,
+				848DA8EB2A84C5E100EF6DDC /* ProfileView.swift */,
+				8462D52B2A89BD770001E0A1 /* VideoMarkView.swift */,
+				84CF31B72A8B749700792B00 /* ImageMarkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8462D5272A89B8BE0001E0A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84CF31B92A8C543700792B00 /* AbilityLink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8462D5282A89B8CC0001E0A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8462D5292A89B9370001E0A1 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		84C2EB7B2A80C15B00C8118C = {
 			isa = PBXGroup;
 			children = (
 				84C2EB862A80C15B00C8118C /* Wannado */,
 				84C2EB852A80C15B00C8118C /* Products */,
+				996B69F0CDE2A5B4E0BDCC09 /* Pods */,
+				8B6B2F9C64E0B32D356DCC5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,10 +98,10 @@
 		84C2EB862A80C15B00C8118C /* Wannado */ = {
 			isa = PBXGroup;
 			children = (
+				8462D5282A89B8CC0001E0A1 /* ViewModels */,
+				8462D5272A89B8BE0001E0A1 /* Models */,
+				8462D5262A89B8AF0001E0A1 /* Views */,
 				84C2EB872A80C15B00C8118C /* WannadoApp.swift */,
-				848DA8E92A84C5D100EF6DDC /* LoginView.swift */,
-				848DA8EB2A84C5E100EF6DDC /* ProfileView.swift */,
-				848DA8ED2A84C5F500EF6DDC /* HomeView.swift */,
 				84C2EB8B2A80C15D00C8118C /* Assets.xcassets */,
 				84C2EB8D2A80C15D00C8118C /* Preview Content */,
 			);
@@ -73,6 +116,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8B6B2F9C64E0B32D356DCC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				009BD2D0F357D76972F578FE /* Pods_Wannado.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		996B69F0CDE2A5B4E0BDCC09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC175A91F95BD15251871BC7 /* Pods-Wannado.debug.xcconfig */,
+				9E96B35EF27CA0193BDABC88 /* Pods-Wannado.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C2EB922A80C15D00C8118C /* Build configuration list for PBXNativeTarget "Wannado" */;
 			buildPhases = (
+				3529F5E6D6B11C15E4706747 /* [CP] Check Pods Manifest.lock */,
 				84C2EB802A80C15B00C8118C /* Sources */,
 				84C2EB812A80C15B00C8118C /* Frameworks */,
 				84C2EB822A80C15B00C8118C /* Resources */,
@@ -109,7 +170,7 @@
 				};
 			};
 			buildConfigurationList = 84C2EB7F2A80C15B00C8118C /* Build configuration list for PBXProject "Wannado" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,14 +199,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3529F5E6D6B11C15E4706747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wannado-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84C2EB802A80C15B00C8118C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CF31BA2A8C543700792B00 /* AbilityLink.swift in Sources */,
 				848DA8EA2A84C5D100EF6DDC /* LoginView.swift in Sources */,
 				848DA8EE2A84C5F500EF6DDC /* HomeView.swift in Sources */,
 				848DA8EC2A84C5E100EF6DDC /* ProfileView.swift in Sources */,
+				8462D52C2A89BD770001E0A1 /* VideoMarkView.swift in Sources */,
+				84CF31B82A8B749700792B00 /* ImageMarkView.swift in Sources */,
+				8462D52A2A89B9370001E0A1 /* HomeViewModel.swift in Sources */,
 				84C2EB882A80C15B00C8118C /* WannadoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,12 +359,14 @@
 		};
 		84C2EB932A80C15D00C8118C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC175A91F95BD15251871BC7 /* Pods-Wannado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wannado/Preview Content\"";
+				DEVELOPMENT_TEAM = 328GX9EB5V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -298,12 +390,14 @@
 		};
 		84C2EB942A80C15D00C8118C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E96B35EF27CA0193BDABC88 /* Pods-Wannado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wannado/Preview Content\"";
+				DEVELOPMENT_TEAM = 328GX9EB5V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
