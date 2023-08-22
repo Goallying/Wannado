@@ -24,7 +24,8 @@ struct VideoMarkView: View {
         NavigationStack {
             
             ZStack{
-                Color.clear.edgesIgnoringSafeArea(.all)
+                Text(video == nil ? "请导入视频":"")
+                    .edgesIgnoringSafeArea(.all)
                     .navigationBarBackButtonHidden(true)
                     .navigationTitle("视频去水印")
                     .navigationBarTitleDisplayMode(.inline)
