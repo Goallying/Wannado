@@ -105,13 +105,15 @@ using namespace cv;
 - (UIImage *)inpaint:(CGRect)rect {
     
     CGFloat screenScale = [UIScreen mainScreen].scale ;
-    CGFloat scale = screenScale ;
+    CGFloat scale = 1 ;
 //    NSLog(@"image size = %@ \n scale = %.f", NSStringFromCGSize(self.size), scale);
     CGRect newRect = CGRectMake(rect.origin.x * scale,rect.origin.y * scale,rect.size.width * scale,rect.size.height * scale) ;
 
     Mat imageMat = self.cvMatRepresentationColor;
     cv::Rect roiRect = cv::Rect(cv::Rect(newRect.origin.x,newRect.origin.y,newRect.size.width,newRect.size.height));
-//    //制作掩膜
+
+//    0 <= roi.x && 0 <= roi.width && roi.x + roi.width <= m.cols && 0 <= roi.y && 0 <= roi.height && roi.y + roi.height <= m.rows
+    //    //制作掩膜
     cv::Mat imageMask = cv::Mat(imageMat.size(),CV_8UC1,cv::Scalar::all(0));
     cv::Mat roiImage = cv::Mat(roiRect.size(),CV_8UC1,cv::Scalar::all(255));
     roiImage.copyTo(imageMask(roiRect));

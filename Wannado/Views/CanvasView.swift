@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Canvas: UIView {
+class CanvasView: UIView {
     
 //    var image:UIView?
     var paths:[UIPath] = []
@@ -85,19 +85,6 @@ class Canvas: UIView {
         return rect
         
     }
-    
-//    init(image: UIView?) {
-//        super.init(frame:image?.frame ?? CGRectZero)
-//        self.isUserInteractionEnabled = true
-//        if let i = image {
-//            i.isUserInteractionEnabled = true
-//            i.contentMode = .scaleAspectFit
-//            self.addSubview(i)
-//        }
-//    }
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
