@@ -12,13 +12,10 @@ import UIKit
 struct ImageMarkView: View {
     
     @State var showPicker:Bool = false
-    //    @State var photoItems:[PhotosPickerItem] = []
-    //    @State var selectImage:Image?
+    @State var photoItem:PhotosPickerItem?
     @State var selectImage:UIImage?   //= UIImage(named: "test")
-    @State var selectedImageURL:String?
     @State var outputImage:UIImage?
     @State var paths:[UIPath] = []
-    
     @State var cavasSize:CGSize = .zero
     
     @Environment(\.dismiss) var dismiss
@@ -101,17 +98,15 @@ struct ImageMarkView: View {
                 } label: {
                     Image(systemName: "square.and.arrow.down")
                 }
-                .sheet(isPresented: $showPicker) {
-                    
-                    SwiftUIImagePicker(isPresented: $showPicker,
-                                       selectedImage: $selectImage,
-                                       selectedImageURL: $selectedImageURL,
-                                       selectedVideoURL: Binding.constant(nil),
-                                       sourceType: UIImagePickerController.SourceType.photoLibrary ,
-                                       mediaType: .image)
+                .photosPicker(isPresented: $showPicker, selection: $photoItem, matching: .images, preferredItemEncoding: .automatic)
+                .onChange(of: photoItem) { newItem in
+
+                    Task {
+                        if let data = try? await newItem?.loadTransferable(type: Data.self){
+                            selectImage = UIImage(data: data)
+                        }
+                    }
                 }
-                
-                
             })
             
             ToolbarItem (placement: .navigationBarTrailing){
@@ -124,6 +119,7 @@ struct ImageMarkView: View {
                     let wResized = selectImage!.size.width > (cavasSize.width * scale)
                     let hResized = selectImage!.size.height  > (cavasSize.height * scale)
                     
+                    //图片被缩小
                     if wResized && hResized
                     {
                         ratio =  max(imagew / (cavasSize.width * scale), imageh / (cavasSize.height * scale))
@@ -134,6 +130,7 @@ struct ImageMarkView: View {
                     else if hResized {
                         ratio = imageh / (cavasSize.height * scale)
                     }
+                    //图片被放大
                     else if !wResized && !hResized {
                         ratio = min((imagew / cavasSize.width * scale), imageh / (cavasSize.height * scale))
                     }
@@ -199,58 +196,8 @@ struct ImageMarkView: View {
         
     }
 }
-
-//struct SwiftUICanvas:UIViewRepresentable {
-//
-//    var image:UIView?
-//    var canvasView:CanvasView = CanvasView()
-//
-//    func pathRect() ->CGRect {
-//        canvasView.path2Rect()
-//    }
-//    func makeUIView(context: Context) -> some UIView {
-//        canvasView
-//    }
-//    func updateUIView(_ uiView: UIViewType, context: Context) {
-//        uiView.backgroundColor = .clear
-//    }
-//}
-struct SizeKey: PreferenceKey {
-    static let defaultValue: CGSize? = nil
-    
-    static func reduce(value: inout CGSize?, nextValue: () -> CGSize?) {
-        value = value ?? nextValue()
-    }
-}
 struct ImageMarkView_Previews: PreviewProvider {
     static var previews: some View {
         ImageMarkView()
     }
 }
-// swift UI code
-//                    .photosPicker(isPresented: $showPicker,
-//                                  selection: $photoItems,
-//                                  maxSelectionCount: 1,
-//                                  matching: .images,
-//                                  preferredItemEncoding: .automatic)
-//                    .onChange(of: photoItems) { newMedia in
-//
-//                        print("media = \(newMedia)")
-//                        guard let i = newMedia.last else {
-//                            return
-//                        }
-//                        i.loadTransferable(type: Image.self){ result in
-//
-//                            switch result {
-//                            case .success(let image):
-//                                if let image = image {
-//                                    print("image == \(image)")
-//                                    self.selectImage = image
-//                                }
-//
-//                            case.failure(let failure):
-//                                print("failure == \(failure)")
-//                            }
-//                        }
-//
-//                    }
