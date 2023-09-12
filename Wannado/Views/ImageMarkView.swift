@@ -14,7 +14,7 @@ struct ImageMarkView: View {
     @State var showPicker:Bool = false
     //    @State var photoItems:[PhotosPickerItem] = []
     //    @State var selectImage:Image?
-    @State var selectImage:UIImage?  // = UIImage(named: "sample.png")
+    @State var selectImage:UIImage?   //= UIImage(named: "test")
     @State var selectedImageURL:String?
     @State var outputImage:UIImage?
     @State var paths:[UIPath] = []
@@ -119,13 +119,29 @@ struct ImageMarkView: View {
                     
                     var ratio:CGFloat = 1
                     let scale = UIScreen.main.scale
+                    let imagew = selectImage!.size.width
+                    let imageh = selectImage!.size.height
+                    let wResized = selectImage!.size.width > (cavasSize.width * scale)
+                    let hResized = selectImage!.size.height  > (cavasSize.height * scale)
                     
-                    if selectImage!.size.width > (cavasSize.width * scale)
+                    if wResized && hResized
                     {
-                        ratio = selectImage!.size.width  / (cavasSize.width * scale)
+                        ratio =  max(imagew / (cavasSize.width * scale), imageh / (cavasSize.height * scale))
                     }
-                    else if selectImage!.size.height  > (cavasSize.height * scale) {
-                        ratio = selectImage!.size.height / (cavasSize.height * scale)
+                    else if wResized {
+                        ratio = imagew / (cavasSize.width * scale)
+                    }
+                    else if hResized {
+                        ratio = imageh / (cavasSize.height * scale)
+                    }
+                    else if !wResized && !hResized {
+                        ratio = min((imagew / cavasSize.width * scale), imageh / (cavasSize.height * scale))
+                    }
+                    else if !wResized {
+                        ratio = imagew / (cavasSize.width * scale)
+                    }
+                    else if !hResized {
+                        ratio = imageh / (cavasSize.height * scale)
                     }
                     
                     let pathRect = path2Rect() ;
