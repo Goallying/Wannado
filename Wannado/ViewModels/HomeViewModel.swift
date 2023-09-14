@@ -25,7 +25,8 @@ class HomeViewModel:ObservableObject{
                                       view: AnyView(VideoMarkView())))
         dataSource.append(AbilityLink(name: "图片去水印",
                                       view: AnyView(ImageMarkView())))
-        
+        dataSource.append(AbilityLink(name: "语音转写",
+                                      view: AnyView(SpeechView())))
         isLoading = false
     }
     

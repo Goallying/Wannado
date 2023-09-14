@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840187242AB1585C00E9969E /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840187232AB1585C00E9969E /* SpeechView.swift */; };
+		840187262AB1AA1900E9969E /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840187252AB1AA1900E9969E /* SpeechManager.swift */; };
 		840BFE352A95A22A005CE6D5 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BFE342A95A22A005CE6D5 /* CanvasView.swift */; };
 		840C90822A984EB600EB286C /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 840C90812A984EB600EB286C /* OpenCVWrapper.mm */; };
 		840C90852A987A2B00EB286C /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 840C90842A987A2B00EB286C /* UIImage+OpenCV.mm */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840187232AB1585C00E9969E /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
+		840187252AB1AA1900E9969E /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		840BFE342A95A22A005CE6D5 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		840C907C2A984BFA00EB286C /* Wannado-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wannado-Bridging-Header.h"; sourceTree = "<group>"; };
 		840C90802A984EB600EB286C /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				84CF31B72A8B749700792B00 /* ImageMarkView.swift */,
 				840BFE342A95A22A005CE6D5 /* CanvasView.swift */,
 				846C5CBB2A96F9C800C1DF2D /* SwiftUIImagePicker.swift */,
+				840187232AB1585C00E9969E /* SpeechView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8462D5292A89B9370001E0A1 /* HomeViewModel.swift */,
+				840187252AB1AA1900E9969E /* SpeechManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				846C5CBC2A96F9C800C1DF2D /* SwiftUIImagePicker.swift in Sources */,
 				840C90822A984EB600EB286C /* OpenCVWrapper.mm in Sources */,
 				848DA8EA2A84C5D100EF6DDC /* LoginView.swift in Sources */,
+				840187242AB1585C00E9969E /* SpeechView.swift in Sources */,
 				848DA8EE2A84C5F500EF6DDC /* HomeView.swift in Sources */,
 				848DA8EC2A84C5E100EF6DDC /* ProfileView.swift in Sources */,
 				840C90852A987A2B00EB286C /* UIImage+OpenCV.mm in Sources */,
@@ -300,6 +307,7 @@
 				84CF31B82A8B749700792B00 /* ImageMarkView.swift in Sources */,
 				8462D52A2A89B9370001E0A1 /* HomeViewModel.swift in Sources */,
 				84C2EB882A80C15B00C8118C /* WannadoApp.swift in Sources */,
+				840187262AB1AA1900E9969E /* SpeechManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +446,9 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wannado/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "访问相机";
+				INFOPLIST_KEY_NSCameraUsageDescription = "申请访问相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "申请访问麦克风";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "申请语言识别权限";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,7 +493,9 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wannado/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "访问相机";
+				INFOPLIST_KEY_NSCameraUsageDescription = "申请访问相机";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "申请访问麦克风";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "申请语言识别权限";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

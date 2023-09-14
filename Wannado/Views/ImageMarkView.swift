@@ -176,7 +176,7 @@ struct ImageMarkView: View {
             let px = path.point.x
             let py = path.point.y
             
-            print("p = \(path.point)\n")
+//            print("p = \(path.point)\n")
             if py < top {
                 top = py
             }
@@ -191,7 +191,7 @@ struct ImageMarkView: View {
             }
         }
         let rect = CGRect(x: left, y: top, width: right - left, height: bottom - top)
-        print("pathRect = \(rect)")
+//        print("pathRect = \(rect)")
         return rect
         
     }
